@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Scripts - Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário de Atendimento</h1>
+    </header>
+
+    <main>
+        <form id="formDados">
+            <div class="form-grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="name" placeholder="Digite seu Nome Completo" required>
+            </div>
+            <div class="form-grupo">
+                <label for="idade">Idade:</label>
+                <input type="number" id="age" placeholder="Digite sua Idade" min="18" required>
+            </div>
+            <div class="form-grupo">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="city" placeholder="Digite sua Cidade" required>
+            </div>
+            <button type="submit" id="btnMake">Gerar Script</button>
+        </form>
+
+        <hr>
+
+        <h2>Script Gerado:</h2>
+        <div class="script-result">
+            <pre><code id="scriptMake">Seu script aparecerá aqui.</code></pre>
+            <button id="btnCopy" class="copy" disabled>Copiar Script</button>
+        </div>
+        
+        <button class="back" onclick="window.history.back()">Voltar</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gerador de Scripts - Online Telecom</p>
+    </footer>
+
+    <script src="formulario.js"></script>
+</body>
+</html>

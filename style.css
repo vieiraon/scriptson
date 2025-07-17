@@ -2,23 +2,34 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4; /* Cor de fundo padrão */
-    color: #333;
+    background-color: #ffffff;
+    color: #220000;
     text-align: center;
-    transition: background-color 0.5s ease; /* Transição suave para a cor de fundo */
+    display:flex;
+    font-style:normal;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupa a altura total da viewport */
 }
 
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    background-color: #d30000;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-color: #000000;
+    border-style:groove;
+    border-width: 2px;
+    border-radius: 15px;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+main {
+    flex-grow: 1; /* Faz o main ocupar o espaço restante */
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 p {
@@ -29,21 +40,151 @@ p {
 
 button {
     background-color: #28a745; /* Verde */
-    color: white;
-    padding: 12px 25px;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
+    border-color: #000000;
+    border-style:groove;
+    border-width: 2px;
+    border-radius: 5px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
+    margin: 5px;
+    text-align: center;
 }
 
 button:hover {
     background-color: #218838; /* Verde mais escuro no hover */
 }
 
-footer {
-    margin-top: 40px;
+/* Estilos para a página inicial */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.btnOption {
+    background-color: #00c3ff; /* Azul para as opções principais */
+    padding: 15px 30px;
+    text-align: center;
+    width: 50%;
+}
+
+.btnOption:hover {
+    color: white;
+    background-color: #003068;
+    font-size: 17px;
+    width: 60%;
+}
+
+/* Estilos para o formulário */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    text-align: left;
+}
+
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="number"] {
+    width: calc(100% - 22px); /* 100% menos padding e border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Estilos para o resultado do script */
+.script-result {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: left;
+    position: relative; /* Para posicionar o botão de copiar */
+}
+
+.script-result pre {
+    white-space: pre-wrap; /* Quebra de linha em textos longos */
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 0.9em;
-    color: #666;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px dashed #ced4da;
+    max-height: 200px; /* Limita a altura e adiciona scroll se necessário */
+    overflow-y: auto;
+}
+
+.script-result code {
+    display: block; /* Garante que o code block preencha o pre */
+}
+
+/* Estilos para o botão de copiar */
+.copy {
+    background-color: #6c757d; /* Cinza padrão */
+    color: white;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    margin-top: 10px;
+    float: right; /* Alinha à direita */
+}
+
+.copy:hover {
+    background-color: #5a6268;
+}
+
+.copy:disabled {
+    background-color: #cccccc; /* Cinza claro quando desabilitado */
+    cursor: not-allowed;
+}
+
+/* Cores do botão de copiar conforme o estado */
+.copy.disponivel {
+    background-color: #007bff; /* Azul quando disponível */
+}
+
+.copy.copiado {
+    background-color: #28a745; /* Verde quando copiado */
+}
+
+.back {
+    background-color: #ffc107; /* Amarelo */
+    color: #333;
+    margin-top: 20px;
+}
+
+.back:hover {
+    background-color: #e0a800;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+footer {
+    margin-top: auto; /* Empurra o footer para baixo */
+    font-size: 0.6em;
+    color: #000000;
+    padding-top: 5px;
 }
